@@ -31,8 +31,9 @@ Getting Started
 ---------------
 
 #### run tests
-
+    $ bundle install
     $ rspec spec
+    $ rake db:migrate
 
 
 #### start rails server to view app in browser
