@@ -17,11 +17,13 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 ##### Useful RVM tips
 
 
-intstall bundler globally
+install bundler globally
 
+    $ cd # to move to your home dir and outside of repo!
     $ rvm gemset use global
     $ gem list
     $ gem install bundler
+    $ cd /path/to/repo
 
 
 
