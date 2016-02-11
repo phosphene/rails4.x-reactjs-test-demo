@@ -28,6 +28,21 @@ intstall bundler globally
 Getting Started
 ---------------
 
+#### run tests
+
+    $ rspec spec
+
+
+#### start rails server to view app in browser
+
+    $ rails s
+
+###### view the app in browser
+
+    http://localhost:3000    
+
+
+
 Documentation and Support
 -------------------------
 
