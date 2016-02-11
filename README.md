@@ -13,6 +13,18 @@ This application requires:
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
+
+##### Useful RVM tips
+
+
+intstall bundler globally
+
+    $ rvm gemset use global
+    $ gem list
+    $ gem install bundler
+
+
+
 Getting Started
 ---------------
 
