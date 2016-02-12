@@ -29,13 +29,19 @@ install bundler globally
 
 Getting Started
 ---------------
+#### first time to repo
 
-#### run tests
     $ bundle install
-    $ rspec spec
+
+and if you have issues with sqlite migrations on Mac you will get an activerecord exception on rspec spec
+
     $ rake db:migrate
 
 
+#### run tests
+
+    $ rspec spec
+    
 #### start rails server to view app in browser
 
     $ rails s
