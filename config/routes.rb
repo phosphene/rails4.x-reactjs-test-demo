@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :artifacts
+  resources :artifacts
+  resources :artifacts
+  resources :artifacts
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
