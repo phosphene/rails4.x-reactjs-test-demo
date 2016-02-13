@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @artifact.name
+p
+  strong File type:
+  = @artifact.file_type
+p
+  strong Corpus:
+  = @artifact.corpus
+p
+  strong Catalog number:
+  = @artifact.catalog_number
+
+= link_to 'Edit', edit_artifact_path(@artifact)
+'|
+= link_to 'Back', artifacts_path
