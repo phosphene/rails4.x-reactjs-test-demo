@@ -40,13 +40,12 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-
-  # spec_helper.rb
-  config.after(:each) do
-    if Rails.env.test? || Rails.env.cucumber?
-      FileUtils.rm_rf(Dir["#{Rails.root}/spec/fixtures/uploads"])
+  config.after(:all) do
+    if Rails.env.test?
+      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads/myfiles/"])
     end
   end
+
 
 
 
