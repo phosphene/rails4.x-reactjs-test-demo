@@ -23,6 +23,8 @@ gem 'high_voltage'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'carrierwave', :git => 'git://github.com/carrierwaveuploader/carrierwave.git'
+gem 'rmagick'
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
