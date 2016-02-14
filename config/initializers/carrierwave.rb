@@ -3,8 +3,6 @@ if Rails.env.test?
     config.storage = :file
     config.enable_processing = false
   end
-
-
   # use different dirs when testing
   CarrierWave::Uploader::Base.descendants.each do |klass|
     next if klass.anonymous?
