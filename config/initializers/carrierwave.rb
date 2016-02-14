@@ -4,7 +4,6 @@ if Rails.env.test?
     config.enable_processing = false
   end
 
-  ArtifactUploader
 
   # use different dirs when testing
   CarrierWave::Uploader::Base.descendants.each do |klass|
@@ -15,7 +14,7 @@ if Rails.env.test?
       end
 
       def store_dir
-        "#{Rails.root}/spec/support/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.name}"
+        "#{Rails.root}/spec/support/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
       end
     end
   end
