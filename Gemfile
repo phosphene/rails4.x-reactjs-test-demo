@@ -26,6 +26,9 @@ gem 'slim-rails'
 gem 'carrierwave', :git => 'git://github.com/carrierwaveuploader/carrierwave.git'
 gem 'rmagick'
 gem 'closure_tree'
+gem 'simple-navigation'
+gem 'simple-navigation-bootstrap'
+gem 'simple_form_fancy_uploads'
 
 group :development do
   gem 'better_errors'

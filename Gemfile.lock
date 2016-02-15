@@ -294,9 +294,18 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     shellany (0.0.1)
+    simple-navigation (3.14.0)
+      activesupport (>= 2.3.2)
+    simple-navigation-bootstrap (1.0.2)
+      railties (>= 3.1)
+      simple-navigation (>= 3.7.0, < 4.0.0)
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    simple_form_fancy_uploads (0.2.0)
+      carrierwave
+      rails (>= 4.0.0)
+      simple_form (~> 3.1)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -391,7 +400,10 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple-navigation
+  simple-navigation-bootstrap
   simple_form
+  simple_form_fancy_uploads
   slim-rails
   spring
   spring-commands-rspec
