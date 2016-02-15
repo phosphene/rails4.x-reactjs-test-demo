@@ -25,6 +25,8 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'carrierwave', :git => 'git://github.com/carrierwaveuploader/carrierwave.git'
 gem 'rmagick'
+gem 'closure_tree'
+
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
