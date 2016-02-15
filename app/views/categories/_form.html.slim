@@ -2,10 +2,8 @@
   = f.error_notification
 
   .form-inputs
+    = f.hidden_field :parent_id
     = f.input :name
-    = f.input :parent_id
-    = f.input :lft
-    = f.input :rgt
 
   .form-actions
     = f.button :submit
