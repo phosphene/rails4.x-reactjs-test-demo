@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :categories
+
+  resources :categories, only: [:index, :create]
+  get '/categories/new/(:parent_id)', to: 'categories#new', as: :new_category
+
   resources :artifacts
-  resources :artifacts
-  resources :artifacts
-  resources :artifacts
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
