@@ -2,8 +2,8 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :parent_id
     = f.input :name
+    = f.input :parent_id, collection: @parents, label_method: :name, value_method: :id, label: "Parent Category", include_blank: true, selected: nil
 
   .form-actions
     = f.button :submit
