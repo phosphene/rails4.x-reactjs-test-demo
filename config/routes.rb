@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :categories, only: [:index, :create]
-  get '/categories/new/(:parent_id)', to: 'categories#new', as: :new_category
+  resources :categories
+  ##get '/categories/new/(:parent_id)', to: 'categories#new', as: :new_category
 
   resources :artifacts
 
