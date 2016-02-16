@@ -9,8 +9,6 @@ FactoryGirl.define do
     trait :child do
     name "Tryptophan"
     end
-
   end
-
 
 end
