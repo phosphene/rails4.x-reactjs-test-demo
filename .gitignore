@@ -88,3 +88,7 @@ pickle-email-*.html
 
 #Emacsen
 \#*#
+
+
+#closure_tree lock files
+.lock*
