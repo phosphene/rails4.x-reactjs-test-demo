@@ -41,19 +41,31 @@ and if you have issues with sqlite migrations on Mac you will get an activerecor
 #### run tests
 
     $ rspec spec
-    
+
 #### start rails server to view app in browser
 
     $ rails s
 
 ###### view the app in browser
 
-    http://localhost:3000    
+    http://localhost:3000
 
 
 
 Documentation and Support
 -------------------------
+
+### VIM as your text editor
+
+astrails has done a good job of pulling together many good plugins and his setup targets Rails development
+
+> All the right plugins are in. Nerdtree, CtrlP, you name it.
+>
+>   The focus is on supporting Rails, but there is a lot of generic stuff too, so it will surely serve you well with any language of your choice.
+
+   $ https://github.com/astrails/dotvim
+
+
 
 Issues
 -------------
