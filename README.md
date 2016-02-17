@@ -48,7 +48,7 @@ and if you have issues with sqlite migrations on Mac you will get an activerecor
 
 will load your seed admin user so you can sign in. It will also run any migrations necessary. check db/seeds.rb for what is loaded
 
-    admin password is now admin
+    admin password is now "changeme"
 
 #### start rails server to view app in browser
 
