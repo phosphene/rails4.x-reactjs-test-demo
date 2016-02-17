@@ -67,7 +67,7 @@ https://github.com/plataformatec/devise
 #### Pundit for policies
 
 
-
+https://github.com/elabs/pundit
 
 
 
