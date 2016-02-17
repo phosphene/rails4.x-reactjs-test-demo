@@ -92,3 +92,4 @@ pickle-email-*.html
 
 #closure_tree lock files
 .lock*
+/README.html
