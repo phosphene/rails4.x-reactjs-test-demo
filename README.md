@@ -48,12 +48,29 @@ and if you have issues with sqlite migrations on Mac you will get an activerecor
 
 ###### view the app in browser
 
-    http://localhost:3000
+http://localhost:3000
 
 
 
 Documentation and Support
 -------------------------
+
+### Gems we are using and their proper uses
+
+
+#### Devise for authentication
+
+
+https://github.com/plataformatec/devise
+
+
+#### Pundit for policies
+
+
+
+
+
+
 
 ### VIM as your text editor
 
@@ -63,7 +80,7 @@ astrails has done a good job of pulling together many good plugins and his setup
 >
 >   The focus is on supporting Rails, but there is a lot of generic stuff too, so it will surely serve you well with any language of your choice.
 
-   $ https://github.com/astrails/dotvim
+https://github.com/astrails/dotvim
 
 
 
