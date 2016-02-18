@@ -98,13 +98,19 @@ https://github.com/astrails/dotvim
 
 ### Git commit flow
 
-This is the most basic of git commit flows
+This is the most basic of git commit flows as if you were working on the master branch of this demo project
 
     $ git pull origin master # check remote for changes
     $ git status  # get the status of our current changes
     $ git add . # or only the files I want to commit
     $ git commit -m  ""  # you can commit many times locally before pushing
     $ git push origin master  # push to master
+
+In practice, you will probably be working on your own feature branches off of the development branch of a private repository. In that instance, it will be time for you to adopt something along the lines of git-flow
+
+http://danielkummer.github.io/git-flow-cheatsheet/
+
+
 
 
 Issues
