@@ -97,6 +97,11 @@ astrails has done a good job of pulling together many good plugins and his setup
 https://github.com/astrails/dotvim
 
 
+### Git commit flow
+
+    $ git status
+
+
 
 Issues
 -------------
