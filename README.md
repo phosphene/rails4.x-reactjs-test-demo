@@ -97,7 +97,12 @@ astrails has done a good job of pulling together many good plugins and his setup
 https://github.com/astrails/dotvim
 
 ### Git commit flow
-    $
+    $git pull origin master
+    $git status
+    $git add
+    $git commit -m
+    $git push origin master
+
 
 Issues
 -------------
