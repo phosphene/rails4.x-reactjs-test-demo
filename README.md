@@ -41,6 +41,11 @@ and if you have issues with sqlite migrations on Mac you will get an activerecor
 #### run tests
 
     $ rspec spec
+    $ rspec spec/features   #will run only features
+    $ rspec spec/policies  #will run only policies
+    $ rspec spec/features/users/sign*  #wildcard
+    $ rspec spec/features/users/sign_in_spec.rb  #fullpath
+
 
 ##### run development mode
 
