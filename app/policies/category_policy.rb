@@ -3,24 +3,27 @@ class CategoryPolicy
 
   def initialize(current_user, category)
     @current_user = current_user
-    @user = user
+    @category = category
+  end
+
+  def create?
+    @current_user.admin? or @current_user.archivist?
   end
 
   def index?
-    @current_user.admin?
+    @current_user.user? or @current_user.admin? or @current_user.archivist?
   end
 
   def show?
-    @current_user.admin? or @current_user == @user
+    @current_user.user? or @current_user.admin? or @current_user.archivist?
   end
 
   def update?
-    @current_user.admin?
+    @current_user.admin? or @current_user.archivist?
   end
 
   def destroy?
-    return false if @current_user == @user
-    @current_user.admin?
+    @current_user.admin? or @current_user.archivist?
   end
 
 end
