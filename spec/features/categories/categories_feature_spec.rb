@@ -1,13 +1,10 @@
 feature "Category feature" do
 
-##currently using htmlunit selenium driver as is all html
+  ##currently using htmlunit selenium driver as is all html
+  let(:user){create(:user, :archivist)}
 
-  background do
-    user = create(:user)
+  scenario 'as a valid archivist user I can create a new category' do
     signin(user.email, user.password)
-    expect(page).to have_content I18n.t 'devise.sessions.signed_in'
-  end
-  scenario 'as a valid user I can create a new category' do
     visit new_category_path()
     fill_in "Name", :with => "Parent Category"
     click_button "Create Category"
@@ -15,7 +12,8 @@ feature "Category feature" do
 
   end
 
-  scenario 'as a valid user I can select valid parent and create a valid child category' do
+  scenario 'as a valid archivist user I can select valid parent and create a valid child category' do
+    signin(user.email, user.password)
     my_parent = create(:category, :parent)
     visit new_category_path()
     fill_in "Name", :with => "A Child"
@@ -26,4 +24,11 @@ feature "Category feature" do
     expect(page).to have_content("success")
   end
 
+  scenario 'as a regular user I cannot create categories' do
+    user = create(:user, email: "test@testme.com")
+    signin(user.email, user.password)
+    visit new_category_path()
+    ##save_and_open_page
+    expect(page).to have_content("Access denied")
+  end
 end

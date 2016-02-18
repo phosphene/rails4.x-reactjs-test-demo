@@ -65,4 +65,23 @@ describe CategoryPolicy do
       end
     end
 
+
+    permissions :new? do
+      it "allows an admin to go to new category path" do
+        expect(subject).to permit(admin)
+      end
+      it "allows an archivist to go to new  category path" do
+        expect(subject).to permit(archivist)
+      end
+
+      it "prevents access to new path if not an admin or archivist" do
+        expect(subject).not_to permit(current_user)
+      end
+    end
+
+
+
+
+
+
 end

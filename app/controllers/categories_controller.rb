@@ -1,31 +1,40 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+  after_action :verify_authorized
+
   before_action :set_category, only: [:show, :edit, :destroy]
 
   # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all
+    authorize Category
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
+    authorize Category
   end
 
   # GET /categories/new
   def new
     @category = Category.new
     @parents = Category.roots
+    authorize @category
   end
 
   # GET /categories/1/edit
   def edit
+    authorize Category
   end
 
   # POST /categories
   # POST /categories.json
   def create
+
     @category = Category.new(parent_id: params[:parent_id])
+    authorize @category
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
@@ -40,6 +49,7 @@ class CategoriesController < ApplicationController
   # PATCH/PUT /categories/1
   # PATCH/PUT /categories/1.json
   def update
+    authorize @category
     respond_to do |format|
       if @category.update(category_params)
         format.html { redirect_to @category, notice: 'Category was successfully updated.' }
@@ -54,6 +64,7 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.json
   def destroy
+    authorize @category
     @category.destroy
     respond_to do |format|
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }

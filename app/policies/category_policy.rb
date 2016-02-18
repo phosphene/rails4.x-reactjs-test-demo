@@ -10,6 +10,11 @@ class CategoryPolicy
     @current_user.admin? or @current_user.archivist?
   end
 
+  def new?
+    @current_user.admin? or @current_user.archivist?
+  end
+
+
   def index?
     @current_user.user? or @current_user.admin? or @current_user.archivist?
   end
