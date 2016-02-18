@@ -1,20 +1,25 @@
 class ArtifactsController < ApplicationController
   before_action :set_artifact, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  after_action :verify_authorized
 
   # GET /artifacts
   # GET /artifacts.json
   def index
     @artifacts = Artifact.all
+    authorize Artifact
   end
 
   # GET /artifacts/1
   # GET /artifacts/1.json
   def show
+    authorize @artifact
   end
 
   # GET /artifacts/new
   def new
     @artifact = Artifact.new
+    authorize @artifact
   end
 
   # GET /artifacts/1/edit
@@ -25,7 +30,7 @@ class ArtifactsController < ApplicationController
   # POST /artifacts.json
   def create
     @artifact = Artifact.new(artifact_params)
-
+    authorize @artifact
     respond_to do |format|
       if @artifact.save
         format.html { redirect_to @artifact, notice: 'Artifact was successfully created.' }
@@ -40,6 +45,7 @@ class ArtifactsController < ApplicationController
   # PATCH/PUT /artifacts/1
   # PATCH/PUT /artifacts/1.json
   def update
+    authorize @artifact
     respond_to do |format|
       if @artifact.update(artifact_params)
         format.html { redirect_to @artifact, notice: 'Artifact was successfully updated.' }
@@ -54,6 +60,7 @@ class ArtifactsController < ApplicationController
   # DELETE /artifacts/1
   # DELETE /artifacts/1.json
   def destroy
+    authorize @artifact
     @artifact.destroy
     respond_to do |format|
       format.html { redirect_to artifacts_url, notice: 'Artifact was successfully destroyed.' }
