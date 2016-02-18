@@ -97,11 +97,14 @@ astrails has done a good job of pulling together many good plugins and his setup
 https://github.com/astrails/dotvim
 
 ### Git commit flow
-    $git pull origin master
-    $git status
-    $git add
-    $git commit -m
-    $git push origin master
+
+This is the most basic of git commit flows
+
+    $ git pull origin master # check remote for changes
+    $ git status  # get the status of our current changes
+    $ git add . # or only the files I want to commit
+    $ git commit -m  ""  # you can commit many times locally before pushing
+    $ git push origin master  # push to master
 
 
 Issues
