@@ -1,7 +1,7 @@
-class UserPolicy
-  attr_reader :current_user, :user
+class CategoryPolicy
+  attr_reader :current_user, :category
 
-  def initialize(current_user, user)
+  def initialize(current_user, category)
     @current_user = current_user
     @user = user
   end
