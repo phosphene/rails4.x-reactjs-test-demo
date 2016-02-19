@@ -11,17 +11,10 @@ feature "Artifact feature" do
    expect(page).to have_content("success")
   end
 
-
-
-  scenario 'basic user cannot access new artifact path' do
+  scenario 'basic ordinay user cannot access new artifact path' do
     signin(basic_user.email, basic_user.password)
     visit new_artifact_path()
     expect(page).to have_content("Access denied")
   end
-
-
-
-
-
 
 end
