@@ -33,10 +33,6 @@ Getting Started
 
     $ bundle install
 
-and if you have issues with sqlite migrations on Mac you will get an activerecord exception on rspec spec
-
-    $ rake db:migrate
-
 
 #### run tests
 
@@ -46,16 +42,24 @@ and if you have issues with sqlite migrations on Mac you will get an activerecor
     $ rspec spec/features/users/sign*  #wildcard
     $ rspec spec/features/users/sign_in_spec.rb  #fullpath
 
+db problems?
+
+   $ rake db:migrate RAILS_ENV=test  #or whatever environment: defaults to development
+
 
 ##### run development mode
 
     $ rake db:setup
 
-will load your seed admin user so you can sign in. It will also run any migrations necessary. check db/seeds.rb for what is loaded
+to load your seeds
 
-    admin password is now "changeme"
+Currently loads:
 
-#### start rails server to view app in browser
+1. admin user so you can sign in. It will also run any migrations necessary. check db/seeds.rb if you wnant to for what is loaded
+
+   a. admin password is now "changeme"
+
+#### start rails server in development mode
 
     $ rails s
 
@@ -69,22 +73,31 @@ http://localhost:3000
 Documentation and Support
 -------------------------
 
-### Gems we are using and their proper uses
+## Gems we are using and their proper uses
 
 
-#### Devise for authentication
+##### Devise for authentication
 
 
 https://github.com/plataformatec/devise
 
 
-#### Pundit for policies
+##### Pundit for policy
 
 
 https://github.com/elabs/pundit
 
 
+##### Simple Navigation for nav
 
+https://github.com/codeplant/simple-navigation
+
+    # generate nav
+    $ rails generate navigation_config
+
+
+
+##### Pareto Optimal Text editing
 
 ### VIM as your text editor
 
