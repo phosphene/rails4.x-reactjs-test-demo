@@ -11,8 +11,9 @@ Rails.application.routes.draw do
     end
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
+  get 'dashboard' => 'dashboards#show', :as => 'user_root'
   root to: 'visitors#index'
   devise_for :users
   resources :users
-  get 'dummy/' => 'dummy#index'
+
 end
