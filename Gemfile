@@ -64,3 +64,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'poltergeist'
 end
+
+gem 'mini_racer', platforms: :ruby

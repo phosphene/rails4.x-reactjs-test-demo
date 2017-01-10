@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'hello_world', to: 'hello_world#index'
   #this is a singleton w/o index
   #i.e. there is only one profile per user
   #no new either, as profile assumed and tacit

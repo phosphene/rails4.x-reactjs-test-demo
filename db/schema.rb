@@ -39,15 +39,6 @@ ActiveRecord::Schema.define(version: 20160221200533) do
   add_index "category_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "category_anc_desc_udx", unique: true
   add_index "category_hierarchies", ["descendant_id"], name: "category_desc_idx"
 
-  create_table "comment_hierarchies", id: false, force: :cascade do |t|
-    t.integer "ancestor_id",   null: false
-    t.integer "descendant_id", null: false
-    t.integer "generations",   null: false
-  end
-
-  add_index "comment_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "comment_anc_desc_udx", unique: true
-  add_index "comment_hierarchies", ["descendant_id"], name: "comment_desc_idx"
-
   create_table "profiles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
