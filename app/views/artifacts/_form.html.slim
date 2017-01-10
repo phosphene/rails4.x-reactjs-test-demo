@@ -1,0 +1,11 @@
+= simple_form_for(@artifact, html: { class: 'form-horizontal' }) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :file_type
+    = f.input :corpus
+    = f.input :catalog_number
+    = f.input :myfile, label: "artifact", as: :attachment_preview
+  .form-actions
+    = f.button :submit

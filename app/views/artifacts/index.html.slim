@@ -1,0 +1,27 @@
+h1 Listing artifacts
+
+table
+  thead
+    tr
+      th Name
+      th File type
+      th Corpus
+      th Catalog number
+      th
+      th
+      th
+
+  tbody
+    - @artifacts.each do |artifact|
+      tr
+        td = artifact.name
+        td = artifact.file_type
+        td = artifact.corpus
+        td = artifact.catalog_number
+        td = link_to 'Show', artifact
+        td = link_to 'Edit', edit_artifact_path(artifact)
+        td = link_to 'Destroy', artifact, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Artifact', new_artifact_path
