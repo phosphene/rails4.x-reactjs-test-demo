@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
-gem 'rails', '4.2.5.1'
+ruby '2.3.1'
+gem 'rails', '4.2.7.1'
 gem 'sqlite3'
-gem "react_on_rails", "~> 6"
-
+gem "react_on_rails", "~> 6.1"
+gem "coffee-rails"
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5.0.0.beta'
@@ -14,6 +14,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'foreman'
 end
 gem 'administrate'
 gem 'bootstrap-sass'
@@ -23,7 +24,7 @@ gem 'high_voltage'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'carrierwave', :git => 'git://github.com/carrierwaveuploader/carrierwave.git'
+gem 'carrierwave', :git => 'https://github.com/carrierwaveuploader/carrierwave.git'
 gem 'rmagick'
 gem 'closure_tree'
 gem 'simple-navigation'
